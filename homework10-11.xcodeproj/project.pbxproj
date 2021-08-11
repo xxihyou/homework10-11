@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		059DA55226C3174800FA1864 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA55126C3174800FA1864 /* AppDelegate.swift */; };
 		059DA55426C3174800FA1864 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA55326C3174800FA1864 /* SceneDelegate.swift */; };
-		059DA55626C3174800FA1864 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA55526C3174800FA1864 /* ViewController.swift */; };
+		059DA55626C3174800FA1864 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA55526C3174800FA1864 /* InfoViewController.swift */; };
 		059DA55926C3174800FA1864 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059DA55726C3174800FA1864 /* Main.storyboard */; };
 		059DA55B26C3174D00FA1864 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059DA55A26C3174D00FA1864 /* Assets.xcassets */; };
 		059DA55E26C3174D00FA1864 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 059DA55C26C3174D00FA1864 /* LaunchScreen.storyboard */; };
+		059DA56626C317F700FA1864 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA56526C317F700FA1864 /* TableViewCell.swift */; };
+		059DA56826C3180B00FA1864 /* ActivitiesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA56726C3180B00FA1864 /* ActivitiesTableViewController.swift */; };
+		059DA56C26C318D000FA1864 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA56B26C318D000FA1864 /* Activity.swift */; };
+		059DA56E26C319DA00FA1864 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059DA56D26C319DA00FA1864 /* Networking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		059DA54E26C3174800FA1864 /* homework10-11.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "homework10-11.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		059DA55126C3174800FA1864 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		059DA55326C3174800FA1864 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		059DA55526C3174800FA1864 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		059DA55526C3174800FA1864 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		059DA55826C3174800FA1864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		059DA55A26C3174D00FA1864 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059DA55D26C3174D00FA1864 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		059DA55F26C3174D00FA1864 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		059DA56526C317F700FA1864 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		059DA56726C3180B00FA1864 /* ActivitiesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewController.swift; sourceTree = "<group>"; };
+		059DA56B26C318D000FA1864 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		059DA56D26C319DA00FA1864 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,43 @@
 		059DA55026C3174800FA1864 /* homework10-11 */ = {
 			isa = PBXGroup;
 			children = (
+				059DA56F26C319DE00FA1864 /* Networking */,
+				059DA56A26C318BF00FA1864 /* Model */,
+				059DA56926C318A900FA1864 /* View Controllers */,
 				059DA55126C3174800FA1864 /* AppDelegate.swift */,
 				059DA55326C3174800FA1864 /* SceneDelegate.swift */,
-				059DA55526C3174800FA1864 /* ViewController.swift */,
-				059DA55726C3174800FA1864 /* Main.storyboard */,
 				059DA55A26C3174D00FA1864 /* Assets.xcassets */,
+				059DA55726C3174800FA1864 /* Main.storyboard */,
 				059DA55C26C3174D00FA1864 /* LaunchScreen.storyboard */,
 				059DA55F26C3174D00FA1864 /* Info.plist */,
+				059DA56526C317F700FA1864 /* TableViewCell.swift */,
 			);
 			path = "homework10-11";
+			sourceTree = "<group>";
+		};
+		059DA56926C318A900FA1864 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				059DA55526C3174800FA1864 /* InfoViewController.swift */,
+				059DA56726C3180B00FA1864 /* ActivitiesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		059DA56A26C318BF00FA1864 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				059DA56B26C318D000FA1864 /* Activity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		059DA56F26C319DE00FA1864 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				059DA56D26C319DA00FA1864 /* Networking.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				059DA55626C3174800FA1864 /* ViewController.swift in Sources */,
+				059DA56C26C318D000FA1864 /* Activity.swift in Sources */,
+				059DA55626C3174800FA1864 /* InfoViewController.swift in Sources */,
+				059DA56826C3180B00FA1864 /* ActivitiesTableViewController.swift in Sources */,
+				059DA56626C317F700FA1864 /* TableViewCell.swift in Sources */,
 				059DA55226C3174800FA1864 /* AppDelegate.swift in Sources */,
 				059DA55426C3174800FA1864 /* SceneDelegate.swift in Sources */,
+				059DA56E26C319DA00FA1864 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
