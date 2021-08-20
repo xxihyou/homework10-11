@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ActivitiesTableViewController: UITableViewController {
 
@@ -34,8 +35,8 @@ class ActivitiesTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "showInfo", sender: nil)
-        var infoVC: InfoViewController?
-        infoVC?.activity = activity
+        let infoVC = InfoViewController()
+        infoVC.activity = activity
     }
 
     private func fetchData(from url: String?) {

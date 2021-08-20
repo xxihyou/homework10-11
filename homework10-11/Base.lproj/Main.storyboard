@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,29 +68,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKz-2u-nex">
-                                <rect key="frame" x="29" y="124" width="319" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKz-2u-nex">
+                                <rect key="frame" x="181.5" y="117" width="41.5" height="566"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pkc-JM-AbP">
+                                <rect key="frame" x="139" y="716" width="126" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9QA-oA-t5r"/>
+                                </constraints>
+                                <state key="normal" title="POST URL">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="postUrlAction:" destination="etN-8d-WZd" eventType="touchUpInside" id="7rU-GM-x61"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwQ-Xq-pk1">
+                                <rect key="frame" x="139" y="784" width="126" height="40"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <state key="normal" title="POST ALAMOFIRE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ygr-eH-lCP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ygr-eH-lCP" firstAttribute="trailing" secondItem="sKz-2u-nex" secondAttribute="trailing" constant="66" id="4JW-V6-kH4"/>
-                            <constraint firstItem="sKz-2u-nex" firstAttribute="leading" secondItem="ygr-eH-lCP" secondAttribute="leading" constant="29" id="5ga-Ie-n4x"/>
-                            <constraint firstItem="sKz-2u-nex" firstAttribute="top" secondItem="ygr-eH-lCP" secondAttribute="top" constant="36" id="ZlU-pb-YAS"/>
+                            <constraint firstItem="Pkc-JM-AbP" firstAttribute="centerX" secondItem="sKz-2u-nex" secondAttribute="centerX" id="3xt-Fg-zXA"/>
+                            <constraint firstItem="ygr-eH-lCP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="sKz-2u-nex" secondAttribute="trailing" id="4JW-V6-kH4"/>
+                            <constraint firstItem="sKz-2u-nex" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ygr-eH-lCP" secondAttribute="leading" id="5ga-Ie-n4x"/>
+                            <constraint firstItem="dwQ-Xq-pk1" firstAttribute="trailing" secondItem="Pkc-JM-AbP" secondAttribute="trailing" id="HLA-vd-U1E"/>
+                            <constraint firstItem="Pkc-JM-AbP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ygr-eH-lCP" secondAttribute="leading" id="K0k-at-BMI"/>
+                            <constraint firstItem="dwQ-Xq-pk1" firstAttribute="leading" secondItem="ygr-eH-lCP" secondAttribute="leading" constant="139" id="XPL-Yx-Jg6"/>
+                            <constraint firstItem="sKz-2u-nex" firstAttribute="top" secondItem="ygr-eH-lCP" secondAttribute="top" constant="29" id="ZlO-Ja-fbI"/>
+                            <constraint firstItem="dwQ-Xq-pk1" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Pkc-JM-AbP" secondAttribute="trailing" id="Zmi-N4-yYq"/>
+                            <constraint firstItem="ygr-eH-lCP" firstAttribute="bottom" secondItem="dwQ-Xq-pk1" secondAttribute="bottom" constant="38" id="eJN-J8-c2t"/>
+                            <constraint firstItem="sKz-2u-nex" firstAttribute="bottom" secondItem="ygr-eH-lCP" secondAttribute="bottom" constant="-179" id="gQh-Bw-LOt"/>
+                            <constraint firstItem="dwQ-Xq-pk1" firstAttribute="top" secondItem="Pkc-JM-AbP" secondAttribute="bottom" constant="28" id="k5j-1f-vPy"/>
+                            <constraint firstItem="dwQ-Xq-pk1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pkc-JM-AbP" secondAttribute="leading" id="rFj-qK-hYU"/>
+                            <constraint firstItem="Pkc-JM-AbP" firstAttribute="top" secondItem="sKz-2u-nex" secondAttribute="bottom" constant="33" id="uRH-kd-ta9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sPD-3v-eBL"/>
                     <connections>
                         <outlet property="descriptionLabel" destination="sKz-2u-nex" id="v5H-1A-x0K"/>
+                        <outlet property="postUrl" destination="Pkc-JM-AbP" id="7hF-mp-Ixx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vnm-nJ-daR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1426" y="119"/>
+            <point key="canvasLocation" x="1424.6376811594205" y="118.52678571428571"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="7L3-Sk-cqo">
@@ -109,8 +141,14 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
